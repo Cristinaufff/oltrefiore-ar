@@ -2,33 +2,40 @@
 <html>
   <head>
     <title>AR Video Markers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- A-Frame e AR.js -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
   </head>
+
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
       
-      <!-- Marker 1 -->
+      <!-- Asset dei video -->
+      <a-assets>
+        <video id="vid1" src="video1.mp4" autoplay loop crossorigin="anonymous" webkit-playsinline playsinline muted></video>
+        <video id="vid2" src="video2.mp4" autoplay loop crossorigin="anonymous" webkit-playsinline playsinline muted></video>
+        <video id="vid3" src="video3.mp4" autoplay loop crossorigin="anonymous" webkit-playsinline playsinline muted></video>
+      </a-assets>
+
+      <!-- Marker 1: mostra video1.mp4 -->
       <a-marker type="pattern" url="marker1.patt">
         <a-video src="#vid1" width="1" height="0.5" position="0 0 0"></a-video>
       </a-marker>
 
-      <!-- Marker 2 -->
+      <!-- Marker 2: mostra video2.mp4 -->
       <a-marker type="pattern" url="marker2.patt">
         <a-video src="#vid2" width="1" height="0.5" position="0 0 0"></a-video>
       </a-marker>
 
-      <!-- Marker 3 -->
+      <!-- Marker 3: mostra video3.mp4 -->
       <a-marker type="pattern" url="marker3.patt">
         <a-video src="#vid3" width="1" height="0.5" position="0 0 0"></a-video>
       </a-marker>
 
-      <a-asset>
-        <video id="vid1" src="video1.mp4" autoplay loop crossorigin="anonymous" webkit-playsinline playsinline muted></video>
-        <video id="vid2" src="video2.mp4" autoplay loop crossorigin="anonymous" webkit-playsinline playsinline muted></video>
-        <video id="vid3" src="video3.mp4" autoplay loop crossorigin="anonymous" webkit-playsinline playsinline muted></video>
-      </a-asset>
-
+      <!-- Camera -->
       <a-entity camera></a-entity>
     </a-scene>
   </body>

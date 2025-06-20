@@ -10,17 +10,17 @@
       
       <!-- Marker 1 -->
       <a-marker type="pattern" url="marker1.patt">
-        <a-video src="#vid1" width="1" height="1" position="0 0 0" rotation="-90 0 0"></a-video>
+        <a-video src="#vid1" width="1" height="0.5" position="0 0 0" rotation="-90 0 0"></a-video>
       </a-marker>
 
       <!-- Marker 2 -->
       <a-marker type="pattern" url="marker2.patt">
-        <a-video src="#vid2" width="1" height="1" position="0 0 0" rotation="-90 0 0"></a-video>
+        <a-video src="#vid2" width="1" height="0.5" position="0 0 0" rotation="-90 0 0"></a-video>
       </a-marker>
 
       <!-- Marker 3 -->
       <a-marker type="pattern" url="marker3.patt">
-        <a-video src="#vid3" width="1" height="1" position="0 0 0" rotation="-90 0 0"></a-video>
+        <a-video src="#vid3" width="1" height="0.5" position="0 0 0" rotation="-90 0 0"></a-video>
       </a-marker>
 
       <a-assets>
@@ -39,7 +39,7 @@
           const vid = document.querySelector('#' + id);
           if (vid) {
             vid.play().catch(e => {
-              console.log(`Errore autoplay video ${id}:`, e);
+              console.log(Errore autoplay video ${id}:, e);
             });
           }
         });

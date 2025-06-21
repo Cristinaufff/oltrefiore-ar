@@ -49,14 +49,14 @@
 
         if (marker && video) {
           marker.addEventListener('markerFound', () => {
-            console.log(${markerId} trovato);
+            console.log(`${markerId} trovato`);
             video.play().catch(err => {
               console.warn('Errore avvio video:', err);
             });
           });
 
           marker.addEventListener('markerLost', () => {
-            console.log(${markerId} perso);
+            console.log(`${markerId} perso`);
             video.pause();
           });
         }
